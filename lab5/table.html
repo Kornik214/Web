@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця Нерухомості</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        input[type="checkbox"] {
+            width: 1.1rem;
+            height: 1.1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            accent-color: #4b5563;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8 font-sans text-sm text-gray-800">
+
+    <div class="max-w-[1000px] mx-auto bg-white border border-gray-200 shadow-sm">
+        
+        <div class="flex flex-wrap items-center justify-between px-4 py-3 border-b border-gray-200">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-1 cursor-pointer">
+                    <input type="checkbox" class="border-gray-300 rounded">
+                    <i class="fa-solid fa-chevron-down text-[10px] text-gray-500 ml-1"></i>
+                </div>
+                
+                <div class="flex border border-gray-300 rounded text-gray-600">
+                    <button class="px-3 py-1.5 flex items-center gap-2 hover:bg-gray-50 transition-colors">
+                        <i class="fa-regular fa-window-maximize text-gray-400"></i> Card
+                    </button>
+                    <button class="px-3 py-1.5 flex items-center gap-2 bg-gray-50 border-l border-gray-300 font-medium text-gray-800">
+                        <i class="fa-solid fa-list-ul text-gray-500"></i> List
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-5 text-gray-600 font-medium">
+                <button class="flex items-center gap-2 hover:text-black transition-colors">
+                    <i class="fa-regular fa-clone text-gray-400"></i> Display
+                </button>
+                <button class="flex items-center gap-2 hover:text-black transition-colors">
+                    <i class="fa-solid fa-bars-staggered text-gray-400"></i> Sort by
+                </button>
+                <button class="flex items-center gap-2 hover:text-black transition-colors ml-2">
+                    <i class="fa-solid fa-ellipsis-vertical text-gray-400"></i> Actions
+                </button>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[800px]">
+                <thead class="bg-[#2d2d2d] text-white">
+                    <tr>
+                        <th class="py-3 px-4 font-semibold w-[35%] text-center border-r border-white/20 sticky left-0 z-20 bg-[#2d2d2d]">Address</th>
+                        <th class="py-3 px-4 font-semibold text-center">Property Type</th>
+                        <th class="py-3 px-4 font-semibold text-center">Beds</th>
+                        <th class="py-3 px-4 font-semibold text-center">Sq Ft</th>
+                        <th class="py-3 px-4 font-semibold text-center">Owner Email</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    
+                    <tr class="group hover:bg-gray-100 transition-colors border-b border-gray-100">
+                        <td class="py-3 px-4 flex items-start gap-4 border-r border-gray-100 sticky left-0 z-10 bg-white group-hover:bg-gray-100 transition-colors">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <div class="text-gray-800 text-[13px] mb-0.5">741 OTT ST</div>
+                                <div class="text-gray-500 text-xs uppercase">BRANCHVILLE, SC, 29432</div>
+                            </div>
+                        </td>
+                        <td class="py-3 px-4 text-center">Single Family Residential</td>
+                        <td class="py-3 px-4 text-center">3</td>
+                        <td class="py-3 px-4 text-center">1,356</td>
+                        <td class="py-3 px-4 text-center">
+                            <i class="fa-solid fa-magnifying-glass-plus text-gray-400 hover:text-gray-600 cursor-pointer text-lg"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="group hover:bg-gray-100 transition-colors border-b border-gray-100">
+                        <td class="py-3 px-4 flex items-start gap-4 border-r border-gray-100 sticky left-0 z-10 bg-white group-hover:bg-gray-100 transition-colors">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <div class="text-gray-800 text-[13px] mb-0.5">130 HUNTER ST</div>
+                                <div class="text-gray-500 text-xs uppercase">BRANCHVILLE, SC, 29432</div>
+                            </div>
+                        </td>
+                        <td class="py-3 px-4 text-center">Single Family Residential</td>
+                        <td class="py-3 px-4 text-center">2</td>
+                        <td class="py-3 px-4 text-center">1,383</td>
+                        <td class="py-3 px-4 text-center">
+                            <i class="fa-solid fa-magnifying-glass-plus text-gray-400 hover:text-gray-600 cursor-pointer text-lg"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="group hover:bg-gray-100 transition-colors border-b border-gray-100">
+                        <td class="py-3 px-4 flex items-start gap-4 border-r border-gray-100 sticky left-0 z-10 bg-white group-hover:bg-gray-100 transition-colors">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <div class="text-gray-800 text-[13px] mb-0.5">7685 FREEDOM RD</div>
+                                <div class="text-gray-500 text-xs uppercase">BRANCHVILLE, SC, 29432</div>
+                            </div>
+                        </td>
+                        <td class="py-3 px-4 text-center">Mobile/Manufactured Home</td>
+                        <td class="py-3 px-4 text-center">3</td>
+                        <td class="py-3 px-4 text-center">1,344</td>
+                        <td class="py-3 px-4 text-center"></td>
+                    </tr>
+
+                    <tr class="group hover:bg-gray-100 transition-colors border-b border-gray-100">
+                        <td class="py-3 px-4 flex items-start gap-4 border-r border-gray-100 sticky left-0 z-10 bg-white group-hover:bg-gray-100 transition-colors">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <div class="text-gray-800 text-[13px] mb-0.5">7315 FREEDOM RD</div>
+                                <div class="text-gray-500 text-xs uppercase">BRANCHVILLE, SC, 29432</div>
+                            </div>
+                        </td>
+                        <td class="py-3 px-4 text-center">Single Family Residential</td>
+                        <td class="py-3 px-4 text-center">6</td>
+                        <td class="py-3 px-4 text-center">4,126</td>
+                        <td class="py-3 px-4 text-center">
+                            <i class="fa-solid fa-magnifying-glass-plus text-gray-400 hover:text-gray-600 cursor-pointer text-lg"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="group hover:bg-gray-100 transition-colors border-b border-gray-100">
+                        <td class="py-3 px-4 flex items-start gap-4 border-r border-gray-100 sticky left-0 z-10 bg-white group-hover:bg-gray-100 transition-colors">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <div class="text-gray-800 text-[13px] mb-0.5">490 FAIREY ST</div>
+                                <div class="text-gray-500 text-xs uppercase">BRANCHVILLE, SC, 29432</div>
+                            </div>
+                        </td>
+                        <td class="py-3 px-4 text-center">Single Family Residential</td>
+                        <td class="py-3 px-4 text-center">4</td>
+                        <td class="py-3 px-4 text-center">2,484</td>
+                        <td class="py-3 px-4 text-center">
+                            <i class="fa-solid fa-magnifying-glass-plus text-gray-400 hover:text-gray-600 cursor-pointer text-lg"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="group hover:bg-gray-100 transition-colors border-b border-gray-100">
+                        <td class="py-3 px-4 flex items-start gap-4 border-r border-gray-100 sticky left-0 z-10 bg-white group-hover:bg-gray-100 transition-colors">
+                            <input type="checkbox" class="mt-1">
+                            <div>
+                                <div class="text-gray-800 text-[13px] mb-0.5">1051 OTT ST</div>
+                                <div class="text-gray-500 text-xs uppercase">BRANCHVILLE, SC, 29432</div>
+                            </div>
+                        </td>
+                        <td class="py-3 px-4 text-center">Single Family Residential</td>
+                        <td class="py-3 px-4 text-center">2</td>
+                        <td class="py-3 px-4 text-center">850</td>
+                        <td class="py-3 px-4 text-center">
+                            <i class="fa-solid fa-magnifying-glass-plus text-gray-400 hover:text-gray-600 cursor-pointer text-lg"></i>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
