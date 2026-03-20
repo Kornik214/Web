@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 7</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input {
+            padding: 5px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        /*стилі для завдання 5*/
+        .animation-container {
+            margin-top: 20px;
+            position: relative;
+            height: 150px;
+        }
+
+        #elid {
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out; 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Завдання 3: Пошук коду округу (США)</h2>
+    <input type="text" id="county-input" placeholder="Baldwin County, Alabama">
+    <button id="find-btn">Знайти код</button>
+    <div id="county-result" style="margin-top: 10px; font-weight: bold;"></div>
+
+    <hr>
+
+    <h2>Завдання 4: Валідація форми</h2>
+    <form id="user-form">
+        <input type="text" id="first_name" placeholder="Ім'я">
+        <input type="text" id="last_name" placeholder="Прізвище">
+        <input type="email" id="email" placeholder="Email">
+        <button type="submit">Відправити</button>
+    </form>
+    <div id="form-error" style="color: red; margin-top: 10px;"></div>
+
+    <hr>
+
+    <h2>Завдання 5: Анімація</h2>
+    <div class="animation-container">
+        <button id="btn-left">Вліво</button>
+        <button id="btn-right">Вправо</button>
+        <div id="elid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
